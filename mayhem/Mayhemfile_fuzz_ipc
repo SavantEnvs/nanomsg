@@ -1,0 +1,10 @@
+# seed-from: https://app.mayhem.security/savantenvs/nanomsg/fuzz-ipc
+project: savantenvs/nanomsg
+target: fuzz_ipc-mined-e6d0b8d
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ipc-mined-e6d0b8d/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ipc
+    libfuzzer: true
+    timeout: 10
