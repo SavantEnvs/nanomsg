@@ -1,0 +1,9 @@
+project: savantenvs/nanomsg
+target: fuzz_ipc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ipc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ipc
+    libfuzzer: true
+    timeout: 10
